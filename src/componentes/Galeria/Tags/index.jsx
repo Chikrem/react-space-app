@@ -1,4 +1,3 @@
-// import Tag from './Tag';
 import styled from "styled-components";
 import tags from "./tags.json";
 
@@ -34,7 +33,7 @@ const Tags = () => {
   return (
     <>
       <TagsContainer>
-        <TagTitulo>Navegue pelas Tags</TagTitulo>
+        <TagTitulo>Navegue pelas Tags: </TagTitulo>
         {tags.map((tag) => (
           <Tag key={tag.id}>{tag.titulo}</Tag>
         ))}
