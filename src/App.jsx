@@ -9,6 +9,7 @@ import Galeria from "./componentes/Galeria";
 
 import bannerBackground from "./assets/banner.png";
 import fotos from './fotos.json'
+import ModalZoom from './componentes/ModalZoom/index';
 
 
 const FundoGradiente = styled.div`
@@ -59,6 +60,7 @@ function App() {
           </ConteudoGaleria>
         </MainContainer>
       </AppContainer>
+      <ModalZoom />
     </FundoGradiente>
   );
 }
