@@ -6,10 +6,10 @@ import Cabecalho from "./componentes/Cabecalho";
 import BarraLateral from "./componentes/BarraLateral";
 import Banner from "./componentes/Banner";
 import Galeria from "./componentes/Galeria";
+import ModalZoom from "./componentes/ModalZoom";
 
 import bannerBackground from "./assets/banner.png";
 import fotos from "./fotos.json";
-import ModalZoom from "./componentes/ModalZoom/index";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -44,6 +44,10 @@ function App() {
 
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
 
+  const aoAlternarFavorito = (foto) => {
+    console.log(foto)
+  }
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -58,6 +62,7 @@ function App() {
             />
             <Galeria
               aoFotoSelecionada={(foto) => setFotoSelecionada(foto)}
+              aoAlternarFavorito={aoAlternarFavorito}
               fotos={fotosDaGaleria}
             />
           </ConteudoGaleria>
